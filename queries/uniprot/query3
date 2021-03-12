@@ -1,0 +1,10 @@
+PREFIX r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX u: <http://purl.uniprot.org/core/>
+
+SELECT ?p ?a WHERE
+{
+?p u:annotation ?a .
+?p r:type u:Protein .
+?a r:type <http://purl.uniprot.org/core/Transmembrane_Annotation> .
+}

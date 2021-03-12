@@ -1,0 +1,2 @@
+PREFIX dbpprop: <http://dbpedia.org/property/> 
+SELECT DISTINCT ?var   { ?var dbpprop:redirect ?var0 . } LIMIT 1000

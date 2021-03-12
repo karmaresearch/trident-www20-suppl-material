@@ -1,0 +1,2 @@
+SELECT ?film
+WHERE { ?film <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:French_films> }

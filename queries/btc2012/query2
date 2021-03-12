@@ -1,0 +1,13 @@
+PREFIX pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dbpediares: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/property/>
+
+SELECT ?t ?lat ?long WHERE
+{
+?a dbpedia:region <http://dbpedia.org/resource/List_of_World_Heritage_Sites_in_Europe> .
+?a dbpedia:title ?t .
+?a pos:lat ?lat .
+?a pos:long ?long .
+?a dbpedia:link <http://whc.unesco.org/en/list/728> .
+}
+

@@ -1,0 +1,11 @@
+PREFIX r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX u: <http://purl.uniprot.org/core/>
+
+SELECT ?a ?vo WHERE
+{
+?a u:encodedBy ?vo .
+?a rs:seeAlso <http://purl.uniprot.org/eggnog/COG0787> .
+?a rs:seeAlso <http://purl.uniprot.org/pfam/PF00842>. 
+?a rs:seeAlso <http://purl.uniprot.org/prints/PR00992>.
+}

@@ -1,0 +1,11 @@
+PREFIX r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX u: <http://purl.uniprot.org/core/>
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
+
+SELECT ?p ?a WHERE {
+?p u:annotation ?a .
+?p r:type u:Protein .
+?p u:organism <http://purl.uniprot.org/taxonomy/9606> .
+?a r:type <http://purl.uniprot.org/core/Disease_Annotation> .
+}

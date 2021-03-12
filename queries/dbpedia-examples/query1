@@ -1,0 +1,10 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?manufacturer ?name ?car
+WHERE {
+    ?car <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Luxury_vehicles> .
+    ?car foaf:name ?name .
+    ?car dbo:manufacturer ?man .
+    ?man foaf:name ?manufacturer
+}

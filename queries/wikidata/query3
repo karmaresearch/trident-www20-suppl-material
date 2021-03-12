@@ -1,0 +1,8 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT ?gender
+WHERE {
+    ?human wdt:P31 wd:Q5 .
+    ?human wdt:P21 ?gender .
+    ?human wdt:P106 wd:Q901 .
+}

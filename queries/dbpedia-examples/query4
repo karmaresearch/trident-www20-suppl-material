@@ -1,0 +1,12 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX db: <http://dbpedia.org/resource/>
+
+SELECT ?name ?birth ?description ?person WHERE {
+     ?person dbo:birthPlace db:Berlin .
+     ?person <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:German_musicians> .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person rdfs:comment ?description .
+}
